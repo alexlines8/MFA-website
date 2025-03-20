@@ -247,7 +247,7 @@ def verify_magic_link(token):
         user.magic_link_completed = True
         user.magic_link_token = None  # Clear token after use
         user.magic_link_expiry = None
-        db.session.commit()
+        db.session.commit()#test
 
         flash("Magic link authentication successful!", "success")
         login_user(user)
