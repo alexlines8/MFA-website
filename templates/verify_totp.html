@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Verify TOTP</h2>
+    <form method="POST">
+        <label for="totp">Enter the code from your authenticator app:</label>
+        <input type="text" class="form-control" name="totp" required>
+        <button type="submit" class="btn btn-primary mt-2">Verify</button>
+    </form>
+</div>
+{% endblock %}

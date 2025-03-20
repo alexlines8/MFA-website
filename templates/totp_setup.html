@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Set up Authenticator App (TOTP)</h2>
+    <p>Scan this QR code with your authenticator app (Google Authenticator, Authy, etc.):</p>
+    <img src="data:image/png;base64,{{ qr_data }}" alt="TOTP QR Code">
+    <br>
+    <a href="{{ url_for('verify_totp') }}" class="btn btn-primary mt-3">I've scanned it</a>
+</div>
+{% endblock %}
